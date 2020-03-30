@@ -1,0 +1,19 @@
+package azhar_problem1;
+
+public class DuplicateRemover{
+	
+	public String outputWords;
+	
+	public void remove(String dataFile) {
+		
+		
+		
+	}
+	
+	public void write(String outputFile) {
+		
+		
+		
+	}
+	
+}

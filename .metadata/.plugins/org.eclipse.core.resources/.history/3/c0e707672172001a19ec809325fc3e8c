@@ -1,0 +1,17 @@
+package azhar_problem1;
+
+import java.io.FileNotFoundException;
+
+public class Application {
+	
+	public static void main(String args[]) throws FileNotFoundException {
+		
+		DuplicateRemover dupRemover = new DuplicateRemover();
+		dupRemover.remove("src/problem1.txt");
+		
+		DuplicateRemover writer = new DuplicateRemover();
+		writer.write("src/problem1.txt");
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+package azhar_problem1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+
+public class DuplicateRemover{
+	
+	public String outputWords;
+	
+	public void remove(String dataFile) throws FileNotFoundException {
+
+		Set<String> hashObject = new HashSet<>();
+		
+		Scanner fileReader = new Scanner(new File(dataFile));
+		while(fileReader.hasNext()) {
+			outputWords = fileReader.next();
+			hashObject.add(outputWords);
+		}
+		
+		//System.out.printf("%s", outputWords);
+		
+	}
+	
+	public void write(String outputFile) {
+		
+		Formatter inputInFile = new Formatter();
+		inputInFile.format("%s", outputWords);
+		
+		inputInFile.close();
+		
+	}
+	
+}

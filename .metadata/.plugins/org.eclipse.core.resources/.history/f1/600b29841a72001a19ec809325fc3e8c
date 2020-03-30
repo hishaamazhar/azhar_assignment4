@@ -1,0 +1,27 @@
+package azhar_problem1;
+
+import java.util.*;
+
+public class DuplicateRemover{
+	
+	public String outputWords;
+	private Scanner fileReader;
+	
+	public void remove(String dataFile) {
+		
+		fileReader = new Scanner(dataFile);
+		while(fileReader.hasNext()) {
+			Set<String> hashObject = new HashSet<>();
+			outputWords = hashObject.next();
+			hashObject.add(outputWords);
+		}
+		
+	}
+	
+	public void write(String outputFile) {
+		
+		
+		
+	}
+	
+}

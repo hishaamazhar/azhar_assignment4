@@ -1,0 +1,62 @@
+package azhar_problem1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Formatter;
+
+public class DuplicateRemover{
+	
+	public String uniqueWords;
+	
+	public void remove(String dataFile) throws FileNotFoundException {
+
+		HashSet<String> hashObject = new HashSet<>();
+		
+		Scanner fileReader = new Scanner(new File(dataFile));
+		while(fileReader.hasNext()) {
+			String x = fileReader.next();
+			hashObject.add(x);
+			uniqueWords = x;
+			
+		}
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((uniqueWords == null) ? 0 : uniqueWords.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DuplicateRemover other = (DuplicateRemover) obj;
+		if (uniqueWords == null) {
+			if (other.uniqueWords != null)
+				return false;
+		} else if (!uniqueWords.equals(other.uniqueWords))
+			return false;
+		return true;
+	}
+
+	public void write(String outputFile) throws FileNotFoundException {
+		
+		Formatter inputInFile = new Formatter("src/unique_words.txt");
+		inputInFile.format("%s", uniqueWords);
+		
+		inputInFile.close();
+		
+	}
+	
+}
